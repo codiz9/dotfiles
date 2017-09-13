@@ -25,6 +25,9 @@ filetype plugin indent on   " required
 let python_highlight_all=1
 syntax enable
 colorscheme jellybeans
+if $TERM == "xterm-256color"
+    set t_Co=256
+endif
 
 " Spaces & Tabs
 set expandtab               " tabs are spaces
