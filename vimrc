@@ -15,7 +15,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 " theme
-Plugin 'nanotech/jellybeans.vim'
+"Plugin 'nanotech/jellybeans.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 " All Plugins must be added before the following line
 call vundle#end()           " required
@@ -24,16 +25,17 @@ filetype plugin indent on   " required
 " Colors
 let python_highlight_all=1
 syntax enable
-colorscheme jellybeans
-if $TERM == "xterm-256color"
-    set t_Co=256
-endif
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Spaces & Tabs
 set expandtab               " tabs are spaces
 set tabstop=4               " number of visual spaces per TAB
 set softtabstop=4           " number of spaces in tab when editing
+set shiftwidth=4
 set autoindent
+set smartindent
 set fileformat=unix
 set backspace=2             " make backspace work like most other apps
 
@@ -44,10 +46,11 @@ let mapleader=","
 set number              " show line numbers
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
-"filetype indent on      " load filetype-specific indent files
+set cursorcolumn        " highlight current column
 set wildmenu            " visual autocomplete for command menu
 set showmatch           " highlighting matching parenthesis
 map <leader>tt <ESC>:NERDTreeToggle<CR>
+let g:airline_powerline_fonts=1
 
 " Searching
 set incsearch           " search as characters are entered
