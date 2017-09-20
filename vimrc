@@ -30,7 +30,6 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 " Spaces & Tabs
-set expandtab               " tabs are spaces
 set tabstop=4               " number of visual spaces per TAB
 set softtabstop=4           " number of spaces in tab when editing
 set shiftwidth=4
@@ -38,6 +37,10 @@ set autoindent
 set smartindent
 set fileformat=unix
 set backspace=2             " make backspace work like most other apps
+
+" FileType specific changes
+" Python
+autocmd FileType python setlocal expandtab
 
 " Leader Shortcuts
 let mapleader=","
